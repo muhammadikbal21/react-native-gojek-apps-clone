@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import { Text, StyleSheet, View, Image, TextInput } from 'react-native'
+import { Text, StyleSheet, View, Image, TextInput, ScrollView } from 'react-native'
 
 export default class App extends Component {
   render() {
     return (
       <View style={{flex: 1}}>
-        <View style={{flex: 1, backgroundColor: 'white'}}>
+        <ScrollView style={{flex: 1, backgroundColor: 'white'}}>
           {/* search bar */}
           <View style={{marginHorizontal: 17, flexDirection: 'row', paddingTop: 15}}>
             <View style={{position: 'relative', flex: 1}}>
@@ -96,7 +96,19 @@ export default class App extends Component {
               </View>
             </View>
           </View>
-        </View>
+          {/* pembatas */}
+          <View style={{height: 17, backgroundColor: '#F2F2F4', marginTop: 20}} />
+          {/* news section */}
+          <View style={{paddingTop: 16, paddingHorizontal: 16}}>
+            <View>
+              <Image source={require('./dummy/sepak-bola.jpg')} style={{height: 170, width: '100%', borderRadius: 6}} />
+            </View>
+            <View style={{paddingTop: 16, paddingBottom: 20}}>
+              <Text style={{fontSize: 16, fontWeight: 'bold', color: '#1C1C1C'}}>GO-NEWS</Text>
+              <Text style={{fontSize: 14, fontWeight: 'normal', color: '#7A7A7A'}}>Dimas Drajad selamatkan penalti, Timnas U-23 kalahkan Brunnei Darussalam</Text>
+            </View>
+          </View>
+        </ScrollView>
         {/* bottom navigation */}
         <View style={{height: 54, flexDirection: 'row', backgroundColor: 'white'}}>
           <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
