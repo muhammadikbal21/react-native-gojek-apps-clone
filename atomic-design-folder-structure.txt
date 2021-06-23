@@ -1,6 +1,6 @@
 struktur folder atomic design react native
-1. atoms: komponen yang paling kecil seperti button, input, dll
-2. molecules: kumpulan komponen atoms yang dijadiin satu seperti header, footer, dll
-3. organisms: sebuah molecules yang sudah memiliki fungsi di setiap komponen molecules nya
-4. templates: sebuah organism yang memiliki value kosong sehingga dapat digunakan kapanpun secara dinamis
-5. pages: bentukan sempurna dari tahap tahap yang sebelumnya (atoms, molecules, organism, dan templates) yang diimplementasikan menjadi sebuah halaman
+1. atoms: komponen yang paling kecil seperti button, input, dll (functional component)
+2. molecules: kumpulan komponen atoms yang dijadiin satu seperti header, footer, dll (functional component)
+3. organisms: sebuah molecules yang sudah memiliki fungsi di setiap komponen molecules nya (class component)
+4. templates: sebuah organism yang memiliki value kosong sehingga dapat digunakan kapanpun secara dinamis (class component)
+5. pages: bentukan sempurna dari tahap tahap yang sebelumnya (atoms, molecules, organism, dan templates) yang diimplementasikan menjadi sebuah halaman (class component)
