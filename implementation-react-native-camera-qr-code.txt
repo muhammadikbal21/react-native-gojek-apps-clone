@@ -1,0 +1,19 @@
+1. gunakan properti onBarCodeRead di component RNCamera, dengan menggunakan arrow function dan parameter barcode:
+  onBarCodeRead={(barcode) => {
+    console.log(barcode);
+  }}
+2. buat state untuk menangkap value dari barcode yang telah di scan: 
+  state = {
+    barcode: ''
+  }
+3. gunakan state pada component:
+  <Text>{this.state.barcode}</Text>
+4. ubah state di dalam function di properti onBarCodeRead:
+  onBarCodeRead={(barcode) => {
+    console.log(barcode);
+    this.setState({
+      barcode: barcode.data
+    })
+  }}
+5. buat barcode secara custome di https://www.qr-code-generator.com/ lalu arahkan scan ke QR code yang telah dibuat
+6. lihat console log di inspect element react native debugger

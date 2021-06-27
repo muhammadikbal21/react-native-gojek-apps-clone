@@ -18,6 +18,11 @@ const IconAction = () => {
 }
 
 class ScanQRCode extends React.Component {
+
+  state = {
+    barcode: 'More Options'
+  }
+
   render() {
     return (
       <View style={{flex: 1}}>
@@ -29,6 +34,7 @@ class ScanQRCode extends React.Component {
             style={styles.preview}
             type={RNCamera.Constants.Type.back}
             flashMode={RNCamera.Constants.FlashMode.on}
+            autoFocus={RNCamera.Constants.AutoFocus.on}
             androidCameraPermissionOptions={{
               title: 'Permission to use camera',
               message: 'We need your permission to use your camera',
@@ -41,8 +47,11 @@ class ScanQRCode extends React.Component {
               buttonPositive: 'Ok',
               buttonNegative: 'Cancel',
             }}
-            onGoogleVisionBarcodesDetected={({ barcodes }) => {
-              console.log(barcodes);
+            onBarCodeRead={(barcode) => {
+              console.log(barcode);
+              this.setState({
+                barcode: barcode.data
+              })
             }}
           />
           <View style={{flexDirection: 'row', paddingHorizontal: 16, marginTop: 16, justifyContent: 'space-between', position: 'absolute', top: 0, left: 0, width: '100%'}}>
@@ -59,7 +68,7 @@ class ScanQRCode extends React.Component {
             <View style={{width: 40, height: 3, backgroundColor: '#E0E0E0', marginVertical: 1}} />
           </View>
           <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
-            <Text style={{fontSize: 24, fontWeight: 'bold', color: 'black'}}>More Options</Text>
+            <Text style={{fontSize: 24, fontWeight: 'bold', color: 'black'}}>{this.state.barcode}</Text>
             <Text style={{fontSize: 14, color: '#61A756', fontWeight: 'bold'}}>SHORTCUT</Text>
           </View>
           <View style={{flexDirection: 'row', alignItems: 'flex-start', marginTop: 14, width: '100%'}}>
