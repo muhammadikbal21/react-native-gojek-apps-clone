@@ -12,9 +12,7 @@ const IconWithText = (props) => {
 
 const IconAction = () => {
   return (
-    <View>
-      <Text>i</Text>
-    </View>
+    <View style={{width: 35, height: 35, backgroundColor: 'white', borderRadius: 35}} />
   )
 }
 
@@ -22,29 +20,30 @@ const ScanQRCode = () => {
   return (
     <View style={{flex: 1}}>
       <View style={{flex: 1, backgroundColor: 'grey'}}>
-        <View>
+        <View style={{flexDirection: 'row', paddingHorizontal: 16, marginTop: 16, justifyContent: 'space-between'}}>
           <IconAction />
-          <View>
+          <View style={{flexDirection: 'row', justifyContent: 'space-between', width: 80}}>
             <IconAction />
             <IconAction />
           </View>
         </View>
       </View>
-      <View style={{height: 250, backgroundColor: 'white', paddingHorizontal: 16}}>
+      <View style={{height: 200, backgroundColor: 'white', paddingHorizontal: 16}}>
         <View style={{alignItems: 'center', marginTop: 8, marginBottom: 18}}>
           <View style={{width: 40, height: 3, backgroundColor: '#E0E0E0', marginVertical: 1}} />
           <View style={{width: 40, height: 3, backgroundColor: '#E0E0E0', marginVertical: 1}} />
         </View>
         <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
           <Text style={{fontSize: 24, fontWeight: 'bold', color: 'black'}}>More Options</Text>
-          <Text style={{fontSize: 14, color: 'green', fontWeight: 'bold'}}>SHORTCUT</Text>
+          <Text style={{fontSize: 14, color: '#61A756', fontWeight: 'bold'}}>SHORTCUT</Text>
         </View>
         <View style={{flexDirection: 'row', alignItems: 'flex-start', marginTop: 14, width: '100%'}}>
-          <View style={{flexDirection: 'row', alignItems: 'flex-start', width: 150, justifyContent: 'space-between'}}>
+          <View style={{flexDirection: 'row', alignItems: 'flex-start', width: 160, justifyContent: 'space-between', paddingRight: 12}}>
             <IconWithText title="Phone Number" />
             <IconWithText title="GoPay Code" />
           </View>
-          <View>
+          <View style={{width: 1, height: 60, backgroundColor: 'grey'}} />
+          <View style={{flex: 1, paddingLeft: 12}}>
             <Text>Your recent GoPay receivers will show here. No admin feels!</Text>
           </View>
         </View>
