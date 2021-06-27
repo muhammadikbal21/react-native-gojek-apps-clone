@@ -1,0 +1,11 @@
+1. npm install @react-navigation/native
+2. npm install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
+3. import ke file index.js (rekomendasi) atau App.js -> import 'react-native-gesture-handler';
+4. import ke file App.js -> import { NavigationContainer } from '@react-navigation/native';
+5. Lalu bungkus component App.js dengan menggunakan <NavigationContainer>{your code}</NavigationContainer>
+
+note:
+switchNavigator -> ketika component tidak dapat melalukan 'back'
+contohnya: setelah login akan masuk ke dashboard, dari dashboard kita tidak bisa melakukan back
+
+stackNavigator -> dapat melakukan back ke halaman sebelumnya
