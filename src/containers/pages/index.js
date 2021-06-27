@@ -4,6 +4,7 @@ import Home from "./Home";
 import Inbox from "./Inbox";
 import NewsDetail from "./NewsDetail";
 import Order from "./Order";
+import ScanQRCode from "./ScanQRCode";
 
 export {
   NewsDetail,
@@ -11,5 +12,6 @@ export {
   Order,
   Help,
   Inbox,
-  Account
+  Account,
+  ScanQRCode
 }

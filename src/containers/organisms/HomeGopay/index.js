@@ -1,3 +1,4 @@
+import { withNavigation } from '@react-navigation/compat'
 import React, { Component } from 'react'
 import { Text, View, Image } from 'react-native'
 import { GopayFeature } from '../../../components/molecules'
@@ -11,7 +12,7 @@ export class HomeGopay extends Component {
           <Text style={{fontSize: 17, fontWeight: 'bold', color: 'white'}}>Rp 50.000</Text>
         </View>
         <View style={{flexDirection: 'row', paddingTop: 20, paddingBottom: 14, backgroundColor: '#2F65BD', borderBottomLeftRadius: 4, borderBottomRightRadius: 4}}>
-          <GopayFeature title="Pay" img={require('../../../assets/icon/pay.png')} />
+          <GopayFeature title="Pay" img={require('../../../assets/icon/pay.png')} onPress={() => this.props.navigation.navigate('ScanQRCode')} />
           <GopayFeature title="Nearby" img={require('../../../assets/icon/nearby.png')} />
           <GopayFeature title="Top Up" img={require('../../../assets/icon/topup.png')} />
           <GopayFeature title="More" img={require('../../../assets/icon/more.png')} />
@@ -21,4 +22,4 @@ export class HomeGopay extends Component {
   }
 }
 
-export default HomeGopay
+export default withNavigation(HomeGopay)
