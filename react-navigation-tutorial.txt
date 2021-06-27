@@ -9,3 +9,7 @@ switchNavigator -> ketika component tidak dapat melalukan 'back'
 contohnya: setelah login akan masuk ke dashboard, dari dashboard kita tidak bisa melakukan back
 
 stackNavigator -> dapat melakukan back ke halaman sebelumnya
+
+HOC pada react navigation agar dapat menerima props dari children nya
+1. npm install @react-navigation/compat
+2. gunakan withNavigation yang diimport dari @react-navigation/compat
